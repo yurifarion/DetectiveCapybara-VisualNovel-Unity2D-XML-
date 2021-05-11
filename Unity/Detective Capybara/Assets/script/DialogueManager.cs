@@ -31,7 +31,10 @@ public class DialogueManager : MonoBehaviour
 		foreach(GameObject p in dialogues){
 			p.SetActive(false);
 		}
-		if(dialogues[dialogueOrder].GetComponent<DialogueBox>().speaker.onScene)dialogues[dialogueOrder].SetActive(true);
+		if(dialogues[dialogueOrder].GetComponent<DialogueBox>().speaker.onScene){
+			dialogues[dialogueOrder].SetActive(true);
+			dialogues[dialogueOrder].GetComponent<DialogueBox>().Reposition();
+		}
 		
 	}
     // Update is called once per frame

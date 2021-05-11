@@ -285,5 +285,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f2cb23a9e82eecb4795dedc320414635, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  typeInterval: 0.02
-  Speaker: {fileID: 0}
+  speaker: {fileID: 0}

@@ -9,6 +9,8 @@ public class GameManager : MonoBehaviour
 	public Transform speakerPosition_left;
 	public Transform startPosition_left;
 	public Transform startPosition_right;
+	public Transform chatBox_left;
+	public Transform chatBox_right;
     // Start is called before the first frame update
     void Start()
     {
