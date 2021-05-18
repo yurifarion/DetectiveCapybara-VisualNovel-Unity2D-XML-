@@ -20,6 +20,18 @@ public class DialogueManager : MonoBehaviour
 		f.GetComponent<DialogueBox>().Init("I used to be an adverture like you",speakers[0]);
 		dialogues.Add(f);
 		
+		GameObject g = Instantiate(prefab,transform.position,transform.rotation);
+		g.GetComponent<DialogueBox>().Init("WTF !!?? stop it, i dont know you",speakers[1]);
+		dialogues.Add(g);
+		
+		GameObject h = Instantiate(prefab,transform.position,transform.rotation);
+		h.GetComponent<DialogueBox>().Init("better be leaving to be honest",speakers[1]);
+		dialogues.Add(h);
+		
+		GameObject i = Instantiate(prefab,transform.position,transform.rotation);
+		i.GetComponent<DialogueBox>().Init("Wait !!!",speakers[0]);
+		dialogues.Add(i);
+		
 		//Make all dialogues box disabled and just enable the one in the order
 		foreach(GameObject p in dialogues){
 			p.SetActive(false);
@@ -29,6 +41,10 @@ public class DialogueManager : MonoBehaviour
 		
 		//Make all dialogues box disabled and just enable the one in the order
 		foreach(GameObject p in dialogues){
+			//if the character is not going to talk but it is on the scene, it will leave it
+			if((dialogues[dialogueOrder].GetComponent<DialogueBox>().speaker != p.GetComponent<DialogueBox>().speaker) && p.GetComponent<DialogueBox>().speaker.onScene){
+				p.GetComponent<DialogueBox>().speaker.leaveScene = true;
+			}
 			p.SetActive(false);
 		}
 		if(dialogues[dialogueOrder].GetComponent<DialogueBox>().speaker.onScene){
@@ -40,7 +56,10 @@ public class DialogueManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-		Debug.Log("dialogueOrder"+dialogueOrder+"dialoguesCount"+dialogues.Count);
+		// if the character is going to talk and it'nt on scene it enters on scene
+		if(dialogues[dialogueOrder].GetComponent<DialogueBox>().speaker.onScene == false){
+			dialogues[dialogueOrder].GetComponent<DialogueBox>().speaker.enterScene = true;
+		}
         if(Input.GetMouseButtonDown(0) && dialogueOrder < dialogues.Count-1 ){
 			dialogueOrder++;
 			ShowDialogue();
