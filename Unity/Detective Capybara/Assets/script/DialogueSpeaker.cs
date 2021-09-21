@@ -27,6 +27,7 @@ public class DialogueSpeaker : MonoBehaviour
 			GetComponent<SpriteRenderer>().flipX = true; // if this char is flipped flip the render
 		}
 	}
+	//This moves the sprite of the character to the speaking position
 	void EnterChat(){
 		if(!onScene){
 			Transform Destination;
@@ -51,6 +52,7 @@ public class DialogueSpeaker : MonoBehaviour
 			GetComponent<SpriteRenderer>().sprite = duck_Char;
 		}
 	}
+	// this moves back the character to listening position
 	void LeaveChat(){
 		if(onScene){
 			Transform Destination;

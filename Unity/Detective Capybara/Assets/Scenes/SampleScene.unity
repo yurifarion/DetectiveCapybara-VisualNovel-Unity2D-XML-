@@ -924,6 +924,7 @@ MonoBehaviour:
   speakers:
   - {fileID: 1262995116}
   - {fileID: 67047344}
+  loader: {fileID: 0}
   prefab: {fileID: 1993118555173247981, guid: 2a80518427df65f489c605f38246db9c, type: 3}
 --- !u!4 &1619982229
 Transform:
@@ -1011,7 +1012,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2048450625}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -7.605479, y: -1.7406375, z: 0.84763414}
+  m_LocalPosition: {x: -9.68, y: -1.7406375, z: 0.84763414}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 216284982}

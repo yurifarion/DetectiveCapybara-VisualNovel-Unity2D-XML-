@@ -12,6 +12,8 @@ using System.IO;
 
 using System.Xml.Linq; //Needed for XDocument
 
+using UnityEngine.SceneManagement;//Used to manage the scenes in the class
+
 public class Loader : MonoBehaviour {
 
 	public XDocument xmlDoc; //create Xdocument. Will be used later to read XML file 
@@ -29,15 +31,16 @@ public class Loader : MonoBehaviour {
 		DontDestroyOnLoad (gameObject); //Allows Loader to carry over into new scene 
 		LoadXML (); //Loads XML File. Code below. 
 		StartCoroutine ("AssignData"); //Starts assigning XML data to data List. Code below
-
+		
 	}
 	void LoadXML(){
 		
 		//Assigning Xdocument xmlDoc. Loads the xml file from the file path listed. 
-		xmlDoc = XDocument.Load( "Assets/script/test.xml" );
+		xmlDoc = XDocument.Load( "Assets/XML Files/dialogues.xml" );
 
 		//This basically breaks down the XML Document into XML Elements. Used later. 
 		items = xmlDoc.Descendants("page").Elements ();
+		
 
 	}
 	//this is our coroutine that will actually read and assign the XML data to our List 
@@ -62,11 +65,14 @@ public class Loader : MonoBehaviour {
 				/*To test and make sure the data has been applied to properly, print out the musicClip name from the data list’s current index. This will let us know if the objects in the list have been created successfully and if their variables have been assigned the right values.
 				*/
 				
-				Debug.Log (dialogueText);
+				//Debug.Log (dialogueText);
+				iteration++; //increment the iteration by 1
 			}
 			
-			iteration++; //increment the iteration by 1
+			
 		}
+	Scene scene = SceneManager.GetActiveScene();//pick the current scene
+	if(scene.name != "SampleScene") SceneManager.LoadScene("SampleScene");//if it'snt already sample scene then load it
 	finishedLoading = true; //tell the program that we’ve finished loading data. yield return null;
 	yield return 0;
 	}

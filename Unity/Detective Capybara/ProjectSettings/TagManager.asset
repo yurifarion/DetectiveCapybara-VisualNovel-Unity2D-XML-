@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Canva
   - GameManager
+  - Loader
   layers:
   - Default
   - TransparentFX
