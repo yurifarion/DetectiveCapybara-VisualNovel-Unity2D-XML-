@@ -1,7 +1,6 @@
+- ![#f03c15](https://via.placeholder.com/15/f03c15/000000?text=+) THIS PROJECT IS UNACTIVE
 
-
-# SpaceBulletTime - Roguelike|Procedural generation
-
+# Detective Capybara
 <!---Esses são exemplos. Veja https://shields.io para outras pessoas ou para personalizar este conjunto de escudos. Você pode querer incluir dependências, status do projeto e informações de licença aqui--->
 
 
@@ -9,28 +8,27 @@
 ![GitHub language count](https://img.shields.io/github/languages/count/iuricode/README-template?style=for-the-badge)
 ![GitHub forks](https://img.shields.io/github/forks/iuricode/README-template?style=for-the-badge)
 
-<img src="sc_1.png" alt="exemplo imagem">
+<img src="sc_1_capy.png" alt="exemplo imagem">
 
-> Space Bullet is a space roguelike shooter, in this game the bullets and the enemies only move if the player moves. The map is randomly generated so you will alway play a fresh experience.
+> Detective Capybara was a visual novel project that isn't active anymore due to lack of writting ability, all the text is populated with XML and you can write any kind of scene using two existing characters named "Mr Duck" and "Capybara".
+> 
 ### Adjustments and improvementss
 
-I am still developing this game, i can only work on it in my free time, so it's very slow paced
+I am not developing this game anymore.
 
-- [x] Create Player movement and animations.
-- [x] Bullet time with bullets and particles when the player isn't moving.
-- [x] Random map based in a seed.
-- [ ] Enemies artificial intelligence, movement
-- [ ] Random indoors and Enemies in the map.
+- [x] Create character anymation and dialogue box.
+- [x] Populate dialogue texts with XML file.
+- [x] Create dialogue based in turns and respecting script order.
 
 ## 💻 Requirements
 
 Before starting, make sure you've met the following requirements:
 * Unity 2020,1,6f1
-* This game uses URP for 2D, it's not compatible with HTML5
 
-## 📫 Contribuindo para <nome_do_projeto>
 
-To contribute to <SpaceBulletTime>, follow these steps:
+## 📫 Contributing to Dectective Capybara
+
+To contribute to Dectective Capybara, follow these steps:
 
 1. Fork this repository.
 2. Create a branch: `git checkout -b <branch_name>`.
@@ -48,4 +46,4 @@ Want to be part of this project? Click [HERE](CONTRIBUTING.md) and read how to c
 
 This project is under license. See the [LICENSE](CC-BY-4.0.md) file for more details.
 
-[⬆Back to the top](#SpaceBulletTime)<br>
+[⬆Back to the top](#DetectiveCapybara)<br>
