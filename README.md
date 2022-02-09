@@ -26,7 +26,7 @@ Before starting, make sure you've met the following requirements:
 * Unity 2020,1,6f1
 
 
-## 📫 Contributing to Dectective Capybara
+## 📫 Contributing to Detective Capybara
 
 To contribute to Dectective Capybara, follow these steps:
 
